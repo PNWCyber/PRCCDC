@@ -1,30 +1,1783 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<title> Pacific Rim Collegiate Cyber Defense Competition </title>
-</head>
-<body background="techpic.jpg">
-<p style="text-align:center;"> <img src="PRCCDC_White.png" height="200" width="600"></p> 
-<table width="100%" bgcolor="white">
-<tr>
-	<td> <h2><p style="text-align:center;"> March 26th and 27th Competition Days</p></h2></td>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pacific Signal — a daylight editorial concept for the Pacific Rim Collegiate Cyber Defense Competition.">
+  <meta name="theme-color" content="#F5F7F2">
+  <title>Pacific Rim Collegiate Cyber Defense Competition | Pacific Signal proof</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    :root {
+      --lime: #9ccb3b;
+      --navy: #002a43;
+      --cyan: #09b0cf;
+      --ink: #0a1e26;
+      --paper: #f5f7f2;
+      --paper-deep: #e9eee7;
+      --red: #d94a45;
+      --white: #ffffff;
+      --line: rgba(10, 30, 38, 0.22);
+      --line-light: rgba(245, 247, 242, 0.22);
+      --display: "Arial Narrow", "Aptos Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+      --body: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      --page: min(91vw, 1440px);
+      --gutter: clamp(1rem, 3vw, 3rem);
+      --section-space: clamp(5rem, 10vw, 10rem);
+    }
 
-	<td><h1> Hosted in 2027 by </h1> <p> South Puget Sound Community College - Lacey Campus </td>
-	<td><img src="spscc.png"></td>
-	<td><h2> <p style="text-align:center;"> March 28th - Job Fair and Awards</p> </h2> </td>
-</tr>
-</table>
- 
-<p>
-<h1> <p style="text-align:center;color:white;"> Thank You to Our Sponsors</p> </h1>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-<table width="100%" bgcolor="white">
-<tr>
-	<td><img src="Fortra-logo.jpg" height="100" width="300"></td>
-</tr>
-<tr>
-	<td><img src="Paloalto.png" height="100" width="400"></td>
-</tr>
-</table>
-<a href="https://www.freepik.com/free-vector/blue-futuristic-networking-technology_15082511.htm#query=technology%20background&position=3&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 7.5rem;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image:
+        linear-gradient(rgba(10, 30, 38, 0.026) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10, 30, 38, 0.018) 1px, transparent 1px);
+      background-size: 100% 24px, 24px 100%;
+      font-family: var(--body);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.25em;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 4px;
+    }
+
+    ::selection {
+      color: var(--ink);
+      background: var(--lime);
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 0.75rem;
+      left: 0.75rem;
+      padding: 0.75rem 1rem;
+      color: var(--white);
+      background: var(--navy);
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      transform: translateY(-180%);
+      transition: transform 160ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .page-shell {
+      width: var(--page);
+      margin-inline: auto;
+    }
+
+    .concept-bar {
+      min-height: 2.75rem;
+      color: var(--paper);
+      background: var(--ink);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .concept-bar .page-shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: inherit;
+      gap: 1rem;
+    }
+
+    .concept-bar a {
+      text-decoration: none;
+    }
+
+    .concept-bar a:hover {
+      color: var(--lime);
+    }
+
+    .concept-id {
+      color: rgba(245, 247, 242, 0.62);
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      background: rgba(245, 247, 242, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      min-height: 5.25rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      gap: 1rem;
+      width: min(24rem, 34vw);
+      padding-inline: 1rem;
+      background: var(--navy);
+      color: var(--paper);
+      border-right: 0;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: clamp(9.5rem, 16vw, 13.5rem);
+      height: auto;
+    }
+
+    .brand-edition {
+      padding-left: 0.8rem;
+      border-left: 1px solid rgba(245, 247, 242, 0.35);
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      line-height: 1.45;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: stretch;
+      margin-left: auto;
+    }
+
+    .site-nav a {
+      display: flex;
+      align-items: center;
+      padding-inline: clamp(0.8rem, 1.55vw, 1.5rem);
+      border-left: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.09em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 160ms ease, background-color 160ms ease;
+    }
+
+    .site-nav a:hover {
+      color: var(--paper);
+      background: var(--navy);
+    }
+
+    .site-nav .nav-emphasis {
+      color: var(--ink);
+      background: var(--lime);
+    }
+
+    .site-nav .nav-emphasis:hover {
+      color: var(--white);
+      background: var(--ink);
+    }
+
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      min-width: 5.25rem;
+      padding: 0;
+      color: var(--ink);
+      background: transparent;
+      border: 0;
+      border-left: 1px solid var(--line);
+      cursor: pointer;
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.91fr) minmax(31rem, 1.09fr);
+      min-height: min(50rem, calc(100vh - 8rem));
+      border-inline: 1px solid var(--line);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 0;
+      padding: clamp(3.25rem, 7vw, 7.5rem) var(--gutter) clamp(2.5rem, 5vw, 4.5rem);
+      border-right: 1px solid var(--line);
+    }
+
+    .hero-copy::before {
+      position: absolute;
+      top: 0;
+      left: var(--gutter);
+      width: 4.2rem;
+      height: 0.38rem;
+      content: "";
+      background: var(--lime);
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin: 0 0 1.4rem;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 1.6rem;
+      height: 1px;
+      content: "";
+      background: currentColor;
+    }
+
+    .hero h1 {
+      max-width: 8ch;
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(4.1rem, 8.2vw, 8.35rem);
+      font-stretch: condensed;
+      font-weight: 900;
+      line-height: 0.79;
+      letter-spacing: -0.075em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--navy);
+    }
+
+    .hero-deck {
+      max-width: 36rem;
+      margin: 2rem 0 0;
+      padding-left: 1.25rem;
+      border-left: 3px solid var(--cyan);
+      font-size: clamp(1rem, 1.35vw, 1.2rem);
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: clamp(2.25rem, 5vw, 4.2rem);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 3.25rem;
+      gap: 1.5rem;
+      padding: 0.25rem 1.15rem;
+      border: 1px solid var(--ink);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+    }
+
+    .button::after {
+      content: "↗";
+      font-size: 1rem;
+    }
+
+    .button:hover {
+      color: var(--paper);
+      background: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--lime);
+    }
+
+    .button-quiet {
+      border-color: var(--line);
+    }
+
+    .button-quiet::after {
+      content: "↓";
+    }
+
+    .hero-brief {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      margin-top: clamp(2.75rem, 6vw, 5.5rem);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brief-item {
+      min-width: 0;
+      padding: 1rem 1rem 1rem 0;
+    }
+
+    .brief-item + .brief-item {
+      padding-left: 1rem;
+      border-left: 1px solid var(--line);
+    }
+
+    .brief-label {
+      display: block;
+      margin-bottom: 0.4rem;
+      color: rgba(10, 30, 38, 0.62);
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .brief-value {
+      display: block;
+      font-family: var(--display);
+      font-size: clamp(1.2rem, 2vw, 1.75rem);
+      font-stretch: condensed;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      text-transform: uppercase;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: grid;
+      min-width: 0;
+      min-height: 46rem;
+      place-items: center;
+      background: var(--paper-deep);
+      isolation: isolate;
+    }
+
+    .hero-visual::before,
+    .hero-visual::after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-visual::before {
+      inset: 1rem;
+      border: 1px solid rgba(10, 30, 38, 0.12);
+    }
+
+    .hero-visual::after {
+      top: 1rem;
+      right: 1rem;
+      width: 5.5rem;
+      height: 5.5rem;
+      border-top: 0.55rem solid var(--cyan);
+      border-right: 0.55rem solid var(--cyan);
+    }
+
+    .signal-map {
+      width: min(95%, 52rem);
+      height: auto;
+    }
+
+    .signal-map .contour,
+    .signal-map .state,
+    .signal-map .region-line,
+    .signal-map .signal-path,
+    .signal-map .coordinate {
+      vector-effect: non-scaling-stroke;
+    }
+
+    .signal-map .contour {
+      fill: none;
+      stroke: rgba(0, 42, 67, 0.14);
+      stroke-width: 1;
+    }
+
+    .signal-map .coordinate {
+      stroke: rgba(10, 30, 38, 0.12);
+      stroke-width: 1;
+      stroke-dasharray: 2 8;
+    }
+
+    .signal-map .state {
+      fill: rgba(245, 247, 242, 0.78);
+      stroke: var(--navy);
+      stroke-width: 1.5;
+    }
+
+    .signal-map .region-line {
+      fill: none;
+      stroke: rgba(0, 42, 67, 0.3);
+      stroke-width: 1;
+      stroke-dasharray: 5 6;
+    }
+
+    .signal-map .ridge {
+      fill: var(--navy);
+    }
+
+    .signal-map .ridge-snow {
+      fill: var(--paper);
+    }
+
+    .signal-map .signal-underlay {
+      fill: none;
+      stroke: var(--paper);
+      stroke-width: 10;
+      stroke-linecap: square;
+      stroke-linejoin: miter;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .signal-map .signal-path {
+      fill: none;
+      stroke: var(--cyan);
+      stroke-width: 4;
+      stroke-linecap: square;
+      stroke-linejoin: miter;
+      stroke-dasharray: 8 6;
+      animation: signal-flow 7s linear infinite;
+    }
+
+    .signal-map .node-ring {
+      fill: var(--paper);
+      stroke: var(--ink);
+      stroke-width: 2;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .signal-map .node-core {
+      fill: var(--lime);
+      stroke: var(--ink);
+      stroke-width: 1.5;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .signal-map .node-live {
+      fill: var(--red);
+      animation: node-pulse 2.8s ease-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .signal-map text {
+      fill: var(--ink);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .signal-map .state-label {
+      fill: rgba(10, 30, 38, 0.6);
+      font-size: 13px;
+    }
+
+    .signal-map .small-label {
+      font-size: 9px;
+      letter-spacing: 0.08em;
+    }
+
+    .map-caption {
+      position: absolute;
+      right: clamp(1.75rem, 3vw, 3rem);
+      bottom: clamp(1.5rem, 3vw, 2.75rem);
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin: 0;
+      padding: 0.65rem 0.8rem;
+      color: var(--paper);
+      background: var(--ink);
+      font-family: var(--mono);
+      font-size: 0.61rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .map-caption::before {
+      width: 0.5rem;
+      height: 0.5rem;
+      content: "";
+      background: var(--lime);
+    }
+
+    @keyframes signal-flow {
+      to { stroke-dashoffset: -140; }
+    }
+
+    @keyframes node-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      55% { opacity: 0.58; transform: scale(1.8); }
+    }
+
+    .section {
+      padding-block: var(--section-space);
+    }
+
+    .section-frame {
+      border-inline: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(10rem, 0.72fr) minmax(0, 1.28fr);
+      gap: var(--gutter);
+      margin-bottom: clamp(3rem, 7vw, 6rem);
+      padding-inline: var(--gutter);
+    }
+
+    .section-index {
+      align-self: start;
+      padding-top: 0.4rem;
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .section-index span {
+      display: inline-block;
+      min-width: 2.1rem;
+      margin-right: 0.8rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 3px solid var(--lime);
+    }
+
+    .section-title-wrap {
+      max-width: 56rem;
+    }
+
+    .section h2 {
+      max-width: 13ch;
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(3rem, 6vw, 6rem);
+      font-stretch: condensed;
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -0.055em;
+      text-transform: uppercase;
+    }
+
+    .section-intro {
+      max-width: 44rem;
+      margin: 1.5rem 0 0;
+      color: rgba(10, 30, 38, 0.72);
+      font-size: clamp(1rem, 1.4vw, 1.2rem);
+      line-height: 1.65;
+    }
+
+    .process {
+      border-top: 1px solid var(--line);
+    }
+
+    .process-row {
+      display: grid;
+      grid-template-columns: 0.72fr 0.68fr 1.6fr;
+      min-height: 9.4rem;
+      border-bottom: 1px solid var(--line);
+      transition: color 180ms ease, background-color 180ms ease;
+    }
+
+    .process-row:hover {
+      color: var(--paper);
+      background: var(--navy);
+    }
+
+    .process-no,
+    .process-title,
+    .process-copy {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+      padding: clamp(1.25rem, 2.4vw, 2.25rem) var(--gutter);
+    }
+
+    .process-no {
+      gap: 0.8rem;
+      font-family: var(--mono);
+      font-size: 0.63rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .process-no::before {
+      width: 1.75rem;
+      height: 1.75rem;
+      content: attr(data-step);
+      display: grid;
+      flex: 0 0 auto;
+      place-items: center;
+      color: var(--ink);
+      background: var(--lime);
+      border: 1px solid var(--ink);
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .process-title,
+    .process-copy {
+      border-left: 1px solid var(--line);
+    }
+
+    .process-row:hover .process-title,
+    .process-row:hover .process-copy {
+      border-color: var(--line-light);
+    }
+
+    .process-title {
+      font-family: var(--display);
+      font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+      font-stretch: condensed;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+    }
+
+    .process-copy {
+      max-width: 54rem;
+      color: rgba(10, 30, 38, 0.75);
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .process-row:hover .process-copy {
+      color: rgba(245, 247, 242, 0.78);
+    }
+
+    .schedule-section {
+      padding-top: 0;
+    }
+
+    .schedule-board {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(17rem, 0.72fr);
+      color: var(--paper);
+      background: var(--navy);
+      border: 1px solid var(--navy);
+    }
+
+    .schedule-main {
+      min-width: 0;
+      padding: clamp(2rem, 5vw, 5rem);
+    }
+
+    .schedule-main .eyebrow {
+      color: var(--lime);
+    }
+
+    .schedule-main h2 {
+      max-width: 11ch;
+      color: var(--paper);
+    }
+
+    .date-line {
+      display: grid;
+      grid-template-columns: 0.58fr 0.78fr 1.64fr;
+      margin-top: clamp(3rem, 6vw, 6rem);
+      border-top: 1px solid var(--line-light);
+    }
+
+    .date-line + .date-line {
+      margin-top: 0;
+    }
+
+    .date-cell {
+      min-width: 0;
+      padding: 1.45rem 1.1rem 1.45rem 0;
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    .date-cell + .date-cell {
+      padding-left: 1.1rem;
+      border-left: 1px solid var(--line-light);
+    }
+
+    .date-day {
+      color: var(--cyan);
+      font-family: var(--display);
+      font-size: clamp(2.35rem, 4vw, 4rem);
+      font-stretch: condensed;
+      font-weight: 900;
+      line-height: 0.8;
+      letter-spacing: -0.04em;
+    }
+
+    .date-weekday,
+    .date-event {
+      font-family: var(--mono);
+      font-size: clamp(0.67rem, 1vw, 0.82rem);
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .date-event {
+      color: rgba(245, 247, 242, 0.7);
+    }
+
+    .schedule-aside {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(2rem, 4vw, 3.5rem);
+      color: var(--ink);
+      background: var(--lime);
+      border-left: 1px solid var(--ink);
+    }
+
+    .venue-pin {
+      width: 3.5rem;
+      height: 3.5rem;
+      display: grid;
+      place-items: center;
+      background: var(--paper);
+      border: 1px solid var(--ink);
+    }
+
+    .venue-pin svg {
+      width: 1.5rem;
+    }
+
+    .venue-label {
+      margin: 2.5rem 0 0.8rem;
+      font-family: var(--mono);
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .venue-name {
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(2rem, 3.5vw, 3.6rem);
+      font-stretch: condensed;
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: -0.045em;
+      text-transform: uppercase;
+    }
+
+    .venue-city {
+      margin: 1rem 0 0;
+      font-size: 0.9rem;
+    }
+
+    .schedule-aside .button {
+      width: 100%;
+      margin-top: 3.5rem;
+      background: var(--paper);
+    }
+
+    .proof {
+      overflow: hidden;
+      color: var(--paper);
+      background: var(--ink);
+      border-block: 1px solid var(--ink);
+    }
+
+    .proof .section-frame {
+      border-color: var(--line-light);
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: minmax(20rem, 0.74fr) minmax(0, 1.26fr);
+      min-height: 41rem;
+    }
+
+    .proof-number {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+      padding: clamp(2.5rem, 5vw, 5rem) var(--gutter);
+      border-right: 1px solid var(--line-light);
+    }
+
+    .proof-number::after {
+      position: absolute;
+      right: 2rem;
+      bottom: 2rem;
+      width: 0;
+      height: 0;
+      content: "";
+      border-right: 3.25rem solid var(--cyan);
+      border-bottom: 3.25rem solid transparent;
+    }
+
+    .proof-stat {
+      color: var(--lime);
+      font-family: var(--display);
+      font-size: clamp(10rem, 24vw, 23rem);
+      font-stretch: condensed;
+      font-weight: 900;
+      line-height: 0.62;
+      letter-spacing: -0.09em;
+    }
+
+    .proof-label {
+      max-width: 17rem;
+      margin: 2.1rem 0 0;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      line-height: 1.5;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .proof-story {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(3rem, 7vw, 7.5rem) var(--gutter);
+    }
+
+    .proof-story .eyebrow {
+      color: var(--cyan);
+    }
+
+    .proof-story h2 {
+      max-width: 11ch;
+      color: var(--paper);
+    }
+
+    .proof-copy {
+      max-width: 44rem;
+      margin: 2rem 0 0;
+      color: rgba(245, 247, 242, 0.72);
+      font-size: clamp(1rem, 1.45vw, 1.22rem);
+      line-height: 1.7;
+    }
+
+    .proof-route {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: clamp(3rem, 7vw, 6rem);
+      border-top: 1px solid var(--line-light);
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    .route-stop {
+      position: relative;
+      min-width: 0;
+      padding: 1.2rem 1rem 1.2rem 0;
+      font-family: var(--mono);
+      font-size: 0.63rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .route-stop + .route-stop {
+      padding-left: 1rem;
+      border-left: 1px solid var(--line-light);
+    }
+
+    .route-stop strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--lime);
+      font-size: 0.72rem;
+    }
+
+    .pathways {
+      border-top: 1px solid var(--line);
+    }
+
+    .pathway-link {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(12rem, 0.72fr) minmax(0, 1.08fr) auto;
+      align-items: center;
+      min-height: 10rem;
+      padding-inline: var(--gutter);
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      transition: color 180ms ease, background-color 180ms ease;
+      isolation: isolate;
+    }
+
+    .pathway-link::before {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 0.5rem;
+      content: "";
+      background: var(--lime);
+      transition: width 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .pathway-link:nth-child(2)::before {
+      background: var(--cyan);
+    }
+
+    .pathway-link:nth-child(3)::before {
+      background: var(--red);
+    }
+
+    .pathway-link:hover {
+      color: var(--paper);
+      background: var(--navy);
+    }
+
+    .pathway-link:hover::before {
+      width: 0.9rem;
+    }
+
+    .pathway-title {
+      font-family: var(--display);
+      font-size: clamp(2.4rem, 4.8vw, 4.9rem);
+      font-stretch: condensed;
+      font-weight: 900;
+      line-height: 0.85;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+    }
+
+    .pathway-copy {
+      max-width: 42rem;
+      padding-inline: var(--gutter);
+      color: rgba(10, 30, 38, 0.72);
+      line-height: 1.65;
+    }
+
+    .pathway-link:hover .pathway-copy {
+      color: rgba(245, 247, 242, 0.75);
+    }
+
+    .pathway-arrow {
+      width: 3.1rem;
+      height: 3.1rem;
+      display: grid;
+      place-items: center;
+      border: 1px solid currentColor;
+      font-family: var(--mono);
+      font-size: 1.15rem;
+    }
+
+    .partners {
+      padding-top: 0;
+    }
+
+    .partner-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.15rem var(--gutter);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      font-family: var(--mono);
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .partner-head span:last-child {
+      color: rgba(10, 30, 38, 0.56);
+    }
+
+    .partner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .partner {
+      display: grid;
+      min-height: 13rem;
+      padding: clamp(1.5rem, 4vw, 3.5rem);
+      place-items: center;
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .partner + .partner {
+      border-left: 1px solid var(--line);
+    }
+
+    .partner img {
+      width: min(100%, 18rem);
+      max-height: 5.75rem;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .partner-host img {
+      width: min(100%, 13rem);
+    }
+
+    .partner-label {
+      display: block;
+      align-self: end;
+      margin-top: 1.5rem;
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .site-footer {
+      color: var(--paper);
+      background: var(--navy);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.55fr);
+      border-inline: 1px solid var(--line-light);
+    }
+
+    .footer-callout {
+      padding: clamp(3rem, 7vw, 7rem) var(--gutter);
+      border-right: 1px solid var(--line-light);
+    }
+
+    .footer-callout h2 {
+      max-width: 12ch;
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(3.4rem, 7vw, 7rem);
+      font-stretch: condensed;
+      font-weight: 900;
+      line-height: 0.86;
+      letter-spacing: -0.055em;
+      text-transform: uppercase;
+    }
+
+    .footer-callout h2 span {
+      color: var(--lime);
+    }
+
+    .footer-callout .button {
+      margin-top: 2.5rem;
+      color: var(--ink);
+      background: var(--lime);
+      border-color: var(--lime);
+    }
+
+    .footer-callout .button:hover {
+      color: var(--ink);
+      background: var(--paper);
+      border-color: var(--paper);
+    }
+
+    .footer-meta {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: clamp(3rem, 5vw, 5rem) var(--gutter);
+    }
+
+    .footer-mark {
+      width: min(100%, 15rem);
+      padding: 1rem;
+      background: var(--paper);
+    }
+
+    .footer-meta p {
+      margin: 0;
+      color: rgba(245, 247, 242, 0.66);
+      font-size: 0.84rem;
+      line-height: 1.65;
+    }
+
+    .footer-fineprint {
+      padding: 1rem var(--gutter);
+      border-top: 1px solid var(--line-light);
+      font-family: var(--mono);
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .footer-fineprint .page-shell {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    @media (max-width: 1100px) {
+      .brand-edition {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 0.92fr) minmax(27rem, 1.08fr);
+      }
+
+      .hero h1 {
+        font-size: clamp(3.8rem, 8.1vw, 6.8rem);
+      }
+
+      .process-row {
+        grid-template-columns: 0.5fr 0.65fr 1.35fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      :root {
+        --page: min(94vw, 1440px);
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .brand {
+        width: auto;
+        border-right: 0;
+      }
+
+      .site-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        color: var(--paper);
+        background: var(--ink);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.18);
+      }
+
+      .site-header.menu-open .site-nav {
+        display: grid;
+      }
+
+      .site-nav a {
+        min-height: 3.8rem;
+        padding-inline: 1.25rem;
+        border-left: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .site-nav a:last-child {
+        border-bottom: 0;
+      }
+
+      .site-nav .nav-emphasis {
+        color: var(--ink);
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        min-height: 42rem;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero h1 {
+        font-size: clamp(4rem, 15vw, 8rem);
+      }
+
+      .hero-visual {
+        min-height: 38rem;
+      }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+
+      .process-row {
+        grid-template-columns: 0.55fr 1fr;
+      }
+
+      .process-copy {
+        grid-column: 1 / -1;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .process-row:hover .process-copy {
+        border-top-color: var(--line-light);
+      }
+
+      .schedule-board {
+        grid-template-columns: 1fr;
+      }
+
+      .schedule-aside {
+        border-top: 1px solid var(--ink);
+        border-left: 0;
+      }
+
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .proof-number {
+        min-height: 28rem;
+        border-right: 0;
+        border-bottom: 1px solid var(--line-light);
+      }
+
+      .proof-stat {
+        font-size: clamp(11rem, 45vw, 20rem);
+      }
+
+      .pathway-link {
+        grid-template-columns: 0.8fr 1.2fr auto;
+      }
+
+      .partner-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .partner-host {
+        grid-column: 1 / -1;
+        border-top: 1px solid var(--line);
+        border-left: 0 !important;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-callout {
+        border-right: 0;
+        border-bottom: 1px solid var(--line-light);
+      }
+    }
+
+    @media (max-width: 600px) {
+      :root {
+        --page: 100%;
+        --gutter: 1.25rem;
+        --section-space: 5.5rem;
+      }
+
+      html {
+        scroll-padding-top: 5.5rem;
+      }
+
+      .concept-bar .page-shell,
+      .header-inner {
+        padding-inline: 1rem;
+      }
+
+      .concept-id {
+        display: none;
+      }
+
+      .header-inner {
+        min-height: 4.5rem;
+      }
+
+      .brand img {
+        width: 9.75rem;
+      }
+
+      .menu-toggle {
+        min-width: 4.5rem;
+        margin-right: -1rem;
+      }
+
+      .hero-grid,
+      .section-frame,
+      .footer-grid {
+        border-inline: 0;
+      }
+
+      .hero-copy {
+        min-height: 39rem;
+        padding-top: 4.25rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.9rem, 19vw, 6rem);
+      }
+
+      .hero-deck {
+        font-size: 0.98rem;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-brief {
+        grid-template-columns: 1fr;
+      }
+
+      .brief-item + .brief-item {
+        padding-left: 0;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .hero-visual {
+        min-height: 31rem;
+      }
+
+      .hero-visual::before {
+        inset: 0.75rem;
+      }
+
+      .signal-map {
+        width: 112%;
+        max-width: none;
+      }
+
+      .map-caption {
+        right: 1rem;
+        bottom: 1rem;
+      }
+
+      .section-index {
+        padding-top: 0;
+      }
+
+      .section h2 {
+        font-size: clamp(3rem, 15vw, 4.5rem);
+      }
+
+      .process-row {
+        grid-template-columns: 1fr;
+        min-height: 0;
+      }
+
+      .process-no,
+      .process-title,
+      .process-copy {
+        padding: 1.25rem;
+      }
+
+      .process-no {
+        padding-bottom: 0.65rem;
+      }
+
+      .process-title {
+        padding-top: 0;
+        border-left: 0;
+      }
+
+      .process-copy {
+        grid-column: auto;
+      }
+
+      .schedule-main,
+      .schedule-aside {
+        padding: 2.25rem 1.25rem;
+      }
+
+      .date-line {
+        grid-template-columns: 0.52fr 0.76fr 1.72fr;
+      }
+
+      .date-cell {
+        padding-block: 1rem;
+      }
+
+      .date-cell + .date-cell {
+        padding-left: 0.7rem;
+      }
+
+      .date-day {
+        font-size: 2.45rem;
+      }
+
+      .proof-number {
+        min-height: 24rem;
+      }
+
+      .proof-story {
+        padding: 4.5rem 1.25rem;
+      }
+
+      .proof-route {
+        grid-template-columns: 1fr;
+      }
+
+      .route-stop + .route-stop {
+        padding-left: 0;
+        border-top: 1px solid var(--line-light);
+        border-left: 0;
+      }
+
+      .pathway-link {
+        grid-template-columns: 1fr auto;
+        gap: 1.5rem;
+        min-height: 0;
+        padding-block: 2rem;
+      }
+
+      .pathway-copy {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        padding-inline: 0;
+      }
+
+      .pathway-arrow {
+        grid-row: 1;
+        grid-column: 2;
+      }
+
+      .partner-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .partner-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .partner {
+        min-height: 10rem;
+      }
+
+      .partner + .partner,
+      .partner-host {
+        grid-column: auto;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .footer-fineprint .page-shell {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+<link rel="stylesheet" href="assets/proofs.css"></head>
+<body class="proof-home" data-proof="pacific-signal">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  
+
+  <header class="site-header">
+    <div class="header-inner page-shell">
+      <a class="brand" href="#top" aria-label="PRCCDC home">
+        <img src="assets/prccdc-logo.png" alt="Pacific Rim Collegiate Cyber Defense Competition">
+        <span class="brand-edition">Pacific Rim CCDC<br>2027 regional competition</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span>Menu</span>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation"><a href="about.html">About</a><a href="history.html">History</a><a href="sponsors.html">Sponsors</a><a class="nav-emphasis" href="#event">2027 event</a></nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-grid page-shell">
+        <div class="hero-copy">
+          <div>
+            <p class="eyebrow">Pacific Rim Collegiate Cyber Defense Competition</p>
+            <h1 id="hero-title">Defend the <span>Pacific Rim.</span></h1>
+            <p class="hero-deck">Student blue teams inherit a live enterprise under pressure. Keep the business moving, meet the mission, and defend it from a professional Red Team.</p>
+
+            <div class="hero-actions" aria-label="Event actions">
+              <a class="button button-primary" href="#event">2027 event details</a>
+              <a class="button button-quiet" href="#how-it-works">How it works</a>
+              <a class="button button-quiet" href="#pathways">Compete · Volunteer · Sponsor</a>
+            </div>
+          </div>
+
+          <div class="hero-brief" aria-label="2027 event summary">
+            <div class="brief-item">
+              <span class="brief-label">Competition</span>
+              <span class="brief-value">Mar 26–27, 2027</span>
+            </div>
+            <div class="brief-item">
+              <span class="brief-label">Job fair + awards</span>
+              <span class="brief-value">Mar 28 · Lacey, WA</span>
+            </div>
+          </div>
+        </div>
+
+        <figure class="hero-visual" aria-labelledby="map-caption">
+          <div class="map-surface"><p class="map-kicker">The Pacific Rim region / WA · OR · ID</p><img class="accurate-region-map" src="assets/regional-states.svg" width="560" height="480" alt="Geographically accurate map of Washington, Oregon and Idaho, with shared state boundaries."><p class="map-attribution">U.S. Census Bureau boundaries · 2024</p></div>
+          <figcaption class="map-caption" id="map-caption">Three states / a path to nationals</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-frame page-shell">
+        <div class="section-head">
+          <div class="section-index"><span>01</span> The exercise loop</div>
+          <div class="section-title-wrap">
+            <h2 id="how-title">A working business. An active adversary.</h2>
+            <p class="section-intro">Collegiate teams manage a realistic organization while a professional Red Team applies pressure. Technical skill matters. So do judgment, teamwork and communication.</p>
+          </div>
+        </div>
+
+        <div class="process" aria-label="Four parts of the competition">
+          <article class="process-row">
+            <div class="process-no" data-step="01">Start here</div>
+            <div class="process-title">Operate</div>
+            <div class="process-copy">Take ownership of unfamiliar systems, understand the business mission and keep essential services available.</div>
+          </article>
+          <article class="process-row">
+            <div class="process-no" data-step="02">Under pressure</div>
+            <div class="process-title">Defend</div>
+            <div class="process-copy">Find weaknesses, harden the environment and respond as a professional Red Team tests the edges of the network.</div>
+          </article>
+          <article class="process-row">
+            <div class="process-no" data-step="03">As a team</div>
+            <div class="process-title">Coordinate</div>
+            <div class="process-copy">Prioritize risk, divide the work and adapt together when the situation changes faster than any one person can follow.</div>
+          </article>
+          <article class="process-row">
+            <div class="process-no" data-step="04">Make it clear</div>
+            <div class="process-title">Communicate</div>
+            <div class="process-copy">Document the response and explain technical decisions in language that business leaders and judges can act on.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-shell"><section class="competition-story" aria-labelledby="story-title"><div><p class="story-label">Inside the competition / An illustrative story</p><h2 id="story-title">The business can’t stop.<br>Neither can your team.</h2></div><div><p>You inherit a company’s network. Customers still need its website. Staff still need their files. Then an unusual burst of sign-in attempts appears—and a new business request arrives.</p><p>Who investigates? Who keeps services running? Who explains the decision? That balance of technical work, teamwork, and communication is the point.</p><p class="story-disclosure">Fictional example for this design proof. Not the announced 2027 scenario or live competition data.</p></div></section></div>
+<section class="section schedule-section" id="event" aria-labelledby="event-title">
+      <div class="schedule-board page-shell">
+        <div class="schedule-main">
+          <p class="eyebrow">2027 field note</p>
+          <h2 id="event-title">Three days in Lacey.</h2><p class="proof-status">Registration details for 2027 have not been published on the official event website. Detailed schedules await organizer confirmation. <a href="https://prccdc.com/">Official event announcement ↗</a></p>
+
+          <div class="date-line">
+            <div class="date-cell date-day">26</div>
+            <div class="date-cell date-weekday">Friday<br>March</div>
+            <div class="date-cell date-event">Competition · Day 01</div>
+          </div>
+          <div class="date-line">
+            <div class="date-cell date-day">27</div>
+            <div class="date-cell date-weekday">Saturday<br>March</div>
+            <div class="date-cell date-event">Competition · Day 02</div>
+          </div>
+          <div class="date-line">
+            <div class="date-cell date-day">28</div>
+            <div class="date-cell date-weekday">Sunday<br>March</div>
+            <div class="date-cell date-event">Job fair + awards</div>
+          </div>
+        </div>
+
+        <aside class="schedule-aside" aria-label="Venue information">
+          <div>
+            <div class="venue-pin" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 21s6-5.72 6-12A6 6 0 0 0 6 9c0 6.28 6 12 6 12Z" stroke="currentColor" stroke-width="1.8" />
+                <circle cx="12" cy="9" r="2.2" fill="#09B0CF" stroke="currentColor" stroke-width="1.3" />
+              </svg>
+            </div>
+            <p class="venue-label">Venue</p>
+            <p class="venue-name">South Puget Sound Community College</p>
+            <p class="venue-city">Lacey Campus · Lacey, Washington</p>
+          </div>
+          <a class="button" href="https://prccdc.com/" target="_blank" rel="noreferrer">2027 event details</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section proof" id="proof" aria-labelledby="proof-title">
+      <div class="section-frame page-shell">
+        <div class="proof-grid">
+          <div class="proof-number">
+            <div class="proof-stat">13</div>
+            <p class="proof-label">Schools met the challenge in the 2026 regional field</p>
+          </div>
+
+          <div class="proof-story">
+            <p class="eyebrow">Recent proof / 2026</p>
+            <h2 id="proof-title">From regional winner to national podium.</h2>
+            <p class="proof-copy">Western Washington University won the 2026 Pacific Rim competition, then carried that performance forward to finish third at the national championship.</p>
+
+            <p class="proof-source-links"><a href="https://news.wwu.edu/update-wwu-cyber-defense-team-claims-third-place-at-national-cybersecurity-competition">Read the 2026 results ↗</a><a href="history.html">Explore competition history →</a></p><div class="proof-route" aria-label="2026 competition progression">
+              <div class="route-stop"><strong>Regional field</strong>13 schools</div>
+              <div class="route-stop"><strong>PRCCDC winner</strong>Western Washington</div>
+              <div class="route-stop"><strong>National finish</strong>Third place</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pathways" aria-labelledby="pathways-title">
+      <div class="section-frame page-shell">
+        <div class="section-head">
+          <div class="section-index"><span>02</span> Pathways in</div>
+          <div class="section-title-wrap">
+            <h2 id="pathways-title">Your place on the range.</h2>
+            <p class="section-intro">The competition is built by a regional community—students, educators, cybersecurity professionals and industry partners.</p>
+          </div>
+        </div>
+
+        <div class="pathways" aria-label="Ways to participate">
+          <a class="pathway-link" href="https://www.nationalccdc.org/rules.html"><span class="pathway-title">Compete</span><span class="pathway-copy">Prepare a team from your college or university. Registration details for 2027 await organizer confirmation.</span><span class="pathway-arrow" aria-hidden="true">→</span></a>
+          <a class="pathway-link" href="about.html#volunteer"><span class="pathway-title">Volunteer</span><span class="pathway-copy">Contribute to judging, infrastructure, or event operations. Volunteer sign-up details are not yet available here.</span><span class="pathway-arrow" aria-hidden="true">→</span></a>
+          <a class="pathway-link" href="sponsors.html"><span class="pathway-title">Sponsor</span><span class="pathway-copy">Support hands-on cybersecurity education and connect with emerging talent. Current sponsorship details await confirmation.</span><span class="pathway-arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section partners" aria-labelledby="partner-title">
+      <div class="section-frame page-shell">
+        <div class="partner-head">
+          <span id="partner-title">Competition community</span>
+          <span>Sponsor recognition + host venue</span>
+        </div>
+        <p class="proof-status">Sponsors displayed on the PRCCDC website. Recognition and participation levels will be updated as the next event’s arrangements are confirmed. <a href="sponsors.html">Sponsorship information →</a></p><div class="partner-grid">
+          <div class="partner">
+            <img src="assets/fortra-logo.jpg" alt="Fortra">
+            <span class="partner-label">Sponsor</span>
+          </div>
+          <div class="partner">
+            <img src="assets/palo-alto-logo.png" alt="Palo Alto Networks">
+            <span class="partner-label">Sponsor</span>
+          </div>
+          <div class="partner partner-host">
+            <img src="assets/spscc-logo.png" alt="South Puget Sound Community College">
+            <span class="partner-label">Host venue</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid page-shell">
+      <div class="footer-callout">
+        <h2>Ready for the <span>signal?</span></h2>
+        <a class="button" href="https://prccdc.com/" target="_blank" rel="noreferrer">Visit the official PRCCDC site</a>
+      </div>
+      <div class="footer-meta">
+        <img class="footer-mark" src="assets/prccdc-logo.png" alt="PRCCDC">
+        <p>The Pacific Rim Collegiate Cyber Defense Competition is the regional qualifier for the National Collegiate Cyber Defense Competition, serving Washington, Oregon and Idaho.</p>
+      </div>
+    </div>
+    <div class="footer-fineprint">
+      <div class="page-shell">
+        <span>Pacific Signal / Design proof</span>
+        <span>Regional range · WA / OR / ID</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const header = document.querySelector('.site-header');
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('#primary-navigation');
+
+      if (!header || !toggle || !nav) return;
+
+      const closeMenu = () => {
+        header.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.querySelector('span').textContent = 'Menu';
+      };
+
+      toggle.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('menu-open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        toggle.querySelector('span').textContent = isOpen ? 'Close' : 'Menu';
+      });
+
+      nav.addEventListener('click', (event) => {
+        if (event.target.closest('a')) closeMenu();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && header.classList.contains('menu-open')) {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 860) closeMenu();
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
