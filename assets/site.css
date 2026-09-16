@@ -141,7 +141,7 @@ details {
   align-items: center;
   align-self: stretch;
   gap: 1rem;
-  width: min(24rem, 34vw);
+  width: min(30rem, 40vw);
   padding-inline: 1rem;
   background: var(--navy);
   color: var(--paper);
