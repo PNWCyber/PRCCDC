@@ -1,25 +1,37 @@
 document.documentElement.classList.add("js");
-const toggle = document.querySelector(".nav-toggle");
-const nav = document.querySelector(".site-nav");
-const closeNav = () => {
-  nav.classList.remove("is-open");
-  toggle.setAttribute("aria-expanded", "false");
-  toggle.setAttribute("aria-label", "Open navigation");
-};
-toggle.addEventListener("click", () => {
-  const open = nav.classList.toggle("is-open");
-  toggle.setAttribute("aria-expanded", String(open));
-  toggle.setAttribute(
-    "aria-label",
-    open ? "Close navigation" : "Open navigation",
+const header = document.querySelector(".site-header");
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("#primary-navigation");
+
+if (header && toggle && nav) {
+  const closeMenu = () => {
+    header.classList.remove("menu-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.querySelector("span").textContent = "Menu";
+  };
+
+  toggle.addEventListener("click", () => {
+    const isOpen = header.classList.toggle("menu-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.querySelector("span").textContent = isOpen ? "Close" : "Menu";
+  });
+
+  nav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && header.classList.contains("menu-open")) {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+
+  window.addEventListener(
+    "resize",
+    () => {
+      if (window.innerWidth > 720) closeMenu();
+    },
+    { passive: true },
   );
-});
-nav.addEventListener("click", (event) => {
-  if (event.target.closest("a")) closeNav();
-});
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && nav.classList.contains("is-open")) {
-    closeNav();
-    toggle.focus();
-  }
-});
+}
